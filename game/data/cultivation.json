@@ -1,0 +1,23 @@
+{
+	"realms": [
+		{"id": "mortal", "name": "凡人", "order": 0, "breakthrough_cost": 100},
+		{"id": "qi_condensation", "name": "炼气", "order": 1, "breakthrough_cost": 400},
+		{"id": "foundation", "name": "筑基", "order": 2, "breakthrough_cost": 900},
+		{"id": "golden_core", "name": "金丹", "order": 3, "breakthrough_cost": 1600},
+		{"id": "nascent_soul", "name": "元婴", "order": 4, "breakthrough_cost": 2500},
+		{"id": "soul_formation", "name": "化神", "order": 5, "breakthrough_cost": 3600},
+		{"id": "void_amalgamation", "name": "合体", "order": 6, "breakthrough_cost": 4900},
+		{"id": "mahayana", "name": "大乘", "order": 7, "breakthrough_cost": 6400},
+		{"id": "ascension", "name": "渡劫飞升", "order": 8, "breakthrough_cost": 8100}
+	],
+	"techniques": [
+		{"id": "sword_art", "name": "剑诀·万剑归宗", "type": "sword", "description": "飞剑数量+1，剑伤提升"},
+		{"id": "body_art", "name": "炼体·金刚不坏", "type": "body", "description": "防御大幅提升，受伤减免"},
+		{"id": "divine_art", "name": "神识·千丝万缕", "type": "divine", "description": "可操控单位数+2，视野扩大"},
+		{"id": "spirit_art", "name": "真灵·化身万千", "type": "spirit", "description": "解锁真灵变身形态"}
+	],
+	"spirit_roots": {
+		"basic": ["metal", "wood", "water", "fire", "earth"],
+		"mutant": ["lightning", "wind", "ice"]
+	}
+}

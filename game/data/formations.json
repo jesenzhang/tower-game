@@ -1,0 +1,54 @@
+{
+	"formations": [
+		{
+			"id": "metal_formation",
+			"name": "金阵·庚金剑气",
+			"element": "metal",
+			"base_damage": 12,
+			"attack_range": 128,
+			"attack_interval": 0.8,
+			"energy_cost": 0.5,
+			"description": "释放庚金剑气，贯穿直线上的敌人"
+		},
+		{
+			"id": "wood_formation",
+			"name": "木阵·万木回春",
+			"element": "wood",
+			"base_damage": 6,
+			"attack_range": 96,
+			"attack_interval": 1.5,
+			"energy_cost": 0.3,
+			"description": "释放木系灵气，治疗范围内阵法并缠绕敌人"
+		},
+		{
+			"id": "water_formation",
+			"name": "水阵·玄冰寒流",
+			"element": "water",
+			"base_damage": 8,
+			"attack_range": 144,
+			"attack_interval": 1.2,
+			"energy_cost": 0.4,
+			"description": "释放玄冰寒流，减速范围内敌人"
+		},
+		{
+			"id": "fire_formation",
+			"name": "火阵·三昧真火",
+			"element": "fire",
+			"base_damage": 15,
+			"attack_range": 112,
+			"attack_interval": 1.0,
+			"energy_cost": 0.6,
+			"description": "释放三昧真火，对区域内敌人造成持续灼烧"
+		},
+		{
+			"id": "earth_formation",
+			"name": "土阵·厚土壁垒",
+			"element": "earth",
+			"base_damage": 5,
+			"attack_range": 80,
+			"attack_interval": 2.0,
+			"energy_cost": 0.3,
+			"description": "召唤土墙阻挡敌人，对附近敌人造成减速"
+		}
+	]
+}

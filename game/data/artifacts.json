@@ -1,0 +1,49 @@
+{
+	"artifacts": [
+		{
+			"id": "flying_sword",
+			"name": "飞剑·青锋",
+			"type": "sword",
+			"tier": 1,
+			"tags": ["sword", "metal"],
+			"set_id": "sword_set",
+			"description": "基础飞剑，自动追踪攻击最近敌人"
+		},
+		{
+			"id": "spirit_pearl",
+			"name": "灵珠·玄水珠",
+			"type": "pearl",
+			"tier": 1,
+			"tags": ["water"],
+			"set_id": "",
+			"description": "环绕玩家旋转，接触敌人造成水系伤害"
+		},
+		{
+			"id": "alchemy_furnace",
+			"name": "丹炉·八卦炉",
+			"type": "furnace",
+			"tier": 1,
+			"tags": ["fire"],
+			"set_id": "",
+			"description": "定期产出灵丹，提供临时增益"
+		},
+		{
+			"id": "spirit_banner",
+			"name": "灵旗·万魂幡",
+			"type": "banner",
+			"tier": 1,
+			"tags": ["summon"],
+			"set_id": "",
+			"description": "召唤灵兽辅助战斗"
+		},
+		{
+			"id": "beast_control",
+			"name": "御兽法器·灵兽环",
+			"type": "beast",
+			"tier": 1,
+			"tags": ["summon", "wood"],
+			"set_id": "beast_set",
+			"description": "控制灵兽协同作战"
+		}
+	]
+}

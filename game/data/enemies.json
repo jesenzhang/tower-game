@@ -1,0 +1,46 @@
+{
+	"enemies": [
+		{
+			"id": "wolf_demon",
+			"name": "妖狼",
+			"max_health": 50,
+			"move_speed": 60,
+			"damage": 8,
+			"spirit_drop": 3,
+			"tags": ["beast"],
+			"description": "普通妖兽，成群出现"
+		},
+		{
+			"id": "snake_demon",
+			"name": "蛇妖",
+			"max_health": 80,
+			"move_speed": 40,
+			"damage": 12,
+			"spirit_drop": 5,
+			"tags": ["beast", "poison"],
+			"description": "远程毒素攻击"
+		},
+		{
+			"id": "bear_demon",
+			"name": "熊妖",
+			"max_health": 200,
+			"move_speed": 25,
+			"damage": 20,
+			"spirit_drop": 8,
+			"tags": ["beast", "elite"],
+			"description": "高血量精英怪"
+		}
+	],
+	"bosses": [
+		{
+			"id": "fox_demon_queen",
+			"name": "九尾狐妖",
+			"max_health": 2000,
+			"move_speed": 30,
+			"damage": 30,
+			"spirit_drop": 50,
+			"tags": ["boss", "fire"],
+			"description": "第一阶段 Boss，释放狐火"
+		}
+	]
+}

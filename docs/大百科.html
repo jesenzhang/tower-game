@@ -1,0 +1,582 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>凡人修仙传全系列修仙大百科</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #FFFFFF;
+        }
+        .card {
+            background-color: white;
+            border: 1px solid #E5E7EB;
+            border-radius: 1.25rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            overflow: hidden;
+            position: relative;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        }
+        .highlight-gradient-blue {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0), rgba(59, 130, 246, 0.05));
+        }
+        .highlight-gradient-purple {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0), rgba(139, 92, 246, 0.05));
+        }
+        .highlight-gradient-green {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0), rgba(34, 197, 94, 0.05));
+        }
+        .highlight-gradient-red {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0), rgba(239, 68, 68, 0.05));
+        }
+        .highlight-gradient-orange {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0), rgba(249, 115, 22, 0.05));
+        }
+        .highlight-gradient-cyan {
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0), rgba(6, 182, 212, 0.05));
+        }
+        .gradient-text-blue {
+            background: linear-gradient(to right, #3B82F6, #60A5FA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-text-purple {
+            background: linear-gradient(to right, #8B5CF6, #A78BFA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-text-green {
+            background: linear-gradient(to right, #22C55E, #4ADE80);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-text-red {
+            background: linear-gradient(to right, #EF4444, #F87171);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-text-orange {
+            background: linear-gradient(to right, #F97316, #FB923C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-text-cyan {
+            background: linear-gradient(to right, #06B6D4, #22D3EE);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div class="max-w-7xl mx-auto p-4 md:p-8">
+        <!-- 标题卡片 -->
+        <div class="card md:col-span-4 p-8 mb-6 text-center relative">
+            <div class="absolute top-0 left-0 w-full h-full highlight-gradient-blue"></div>
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4">《凡人修仙传》全系列修仙大百科</h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-6">版本覆盖：正传（人界/灵界篇）、《凡人修仙之仙界篇》、《凡人修仙之玄界之门》</p>
+            <div class="flex justify-center items-center space-x-4 text-sm text-gray-500">
+                <span><i class="fa-solid fa-book mr-2"></i>忘语原著官方设定</span>
+                <span><i class="fa-solid fa-check-circle mr-2"></i>起点中文网权威资料</span>
+                <span><i class="fa-solid fa-layer-group mr-2"></i>全系列剧情细节汇总</span>
+            </div>
+        </div>
+
+        <!-- 主网格 -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
+            <!-- 法宝篇 -->
+            <div class="card md:col-span-2 md:row-span-2 p-6 flex flex-col relative">
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-purple"></div>
+                <div class="flex items-center mb-4">
+                    <i class="fa-solid fa-gem text-3xl gradient-text-purple mr-4"></i>
+                    <h2 class="text-2xl font-bold gradient-text-purple">法宝篇</h2>
+                </div>
+                <p class="text-gray-600 mb-4">法宝是修仙者斗法的核心依仗，从低阶法器到凌驾于天地法则的至宝，每一级都对应着修士的境界壁垒与战力天花板。</p>
+                
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">法宝等级体系</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                            <span class="text-sm"><strong>法器</strong> - 人界（炼气-筑基）</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                            <span class="text-sm"><strong>符宝/真宝</strong> - 人界（结丹-元婴）</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-purple-600 rounded-full mr-3"></div>
+                            <span class="text-sm"><strong>法宝/古宝</strong> - 人界（元婴-化神）</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-purple-700 rounded-full mr-3"></div>
+                            <span class="text-sm"><strong>通天灵宝</strong> - 灵界（炼虚-大乘）</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-purple-800 rounded-full mr-3"></div>
+                            <span class="text-sm"><strong>玄天之宝</strong> - 灵界/仙界（大乘-真仙）</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-purple-900 rounded-full mr-3"></div>
+                            <span class="text-sm"><strong>仙器（1-9品）</strong> - 仙界（真仙-道祖）</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-indigo-900 rounded-full mr-3"></div>
+                            <span class="text-sm"><strong>法则至宝</strong> - 全界面（道祖级）</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-auto">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">核心至宝</h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-purple-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-purple-800 mb-1">掌天瓶</h4>
+                            <p class="text-xs text-purple-600">蕴含时间、空间、轮回三大至尊法则</p>
+                        </div>
+                        <div class="bg-purple-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-purple-800 mb-1">玄天斩灵剑</h4>
+                            <p class="text-xs text-purple-600">混沌万灵榜第三，蕴含毁灭法则</p>
+                        </div>
+                        <div class="bg-purple-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-purple-800 mb-1">虚天鼎</h4>
+                            <p class="text-xs text-purple-600">伴生乾蓝冰焰，炼制补天丹的唯一容器</p>
+                        </div>
+                        <div class="bg-purple-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-purple-800 mb-1">风雷翅</h4>
+                            <p class="text-xs text-purple-600">兼具风、雷两种法则之力，极致速度</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 灵丹篇 -->
+            <div class="card md:col-span-2 p-6 flex flex-col relative">
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-green"></div>
+                <div class="flex items-center mb-4">
+                    <i class="fa-solid fa-flask-vial text-3xl gradient-text-green mr-4"></i>
+                    <h2 class="text-2xl font-bold gradient-text-green">灵丹篇</h2>
+                </div>
+                <p class="text-gray-600 mb-4">灵丹是修仙者突破境界、修复伤势的核心资源，其等级严格对应修士境界。</p>
+                
+                <div class="mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">灵丹等级体系</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                            <span class="text-sm"><strong>初/中/高阶丹</strong> - 人界（炼气-结丹）</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                            <span class="text-sm"><strong>极品丹/灵丹</strong> - 人界（元婴-化神）</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
+                            <span class="text-sm"><strong>虚灵丹/万妙丹</strong> - 灵界（炼虚-合体）</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-green-700 rounded-full mr-3"></div>
+                            <span class="text-sm"><strong>道丹（1-9品）</strong> - 仙界（真仙-道祖）</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-auto">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">核心灵丹</h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-green-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-green-800 mb-1">筑基丹</h4>
+                            <p class="text-xs text-green-600">将筑基成功率从10%提升至30%</p>
+                        </div>
+                        <div class="bg-green-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-green-800 mb-1">结金丹</h4>
+                            <p class="text-xs text-green-600">将结丹成功率从5%提升至20%</p>
+                        </div>
+                        <div class="bg-green-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-green-800 mb-1">九曲灵参丹</h4>
+                            <p class="text-xs text-green-600">将结婴成功率提升至50%以上</p>
+                        </div>
+                        <div class="bg-green-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-green-800 mb-1">时间道丹</h4>
+                            <p class="text-xs text-green-600">蕴含最纯粹的时间法则之力</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 妖兽篇 -->
+            <div class="card md:col-span-2 p-6 flex flex-col relative">
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-red"></div>
+                <div class="flex items-center mb-4">
+                    <i class="fa-solid fa-dragon text-3xl gradient-text-red mr-4"></i>
+                    <h2 class="text-2xl font-bold gradient-text-red">妖兽篇</h2>
+                </div>
+                <p class="text-gray-600 mb-4">妖兽是修仙界的原生居民，以"妖力""血脉纯度"划分等级，部分高阶妖兽的血脉甚至能碾压同阶修士。</p>
+                
+                <div class="mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">妖兽等级体系</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-red-400 rounded-full mr-3"></div>
+                            <span class="text-sm"><strong>1-3级</strong> - 炼气-筑基中期</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
+                            <span class="text-sm"><strong>4-6级</strong> - 筑基后期-结丹中期</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                            <span class="text-sm"><strong>7-10级</strong> - 结丹后期-元婴后期</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-red-700 rounded-full mr-3"></div>
+                            <span class="text-sm"><strong>11-13级</strong> - 炼虚-大乘</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-red-800 rounded-full mr-3"></div>
+                            <span class="text-sm"><strong>真灵级</strong> - 仙界（真仙-道祖）</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-auto">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">核心妖兽</h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-red-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-red-800 mb-1">啼魂兽</h4>
+                            <p class="text-xs text-red-600">鬼物的绝对克星，能吞噬阴魂提升实力</p>
+                        </div>
+                        <div class="bg-red-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-red-800 mb-1">噬金虫王</h4>
+                            <p class="text-xs text-red-600">以各种金属、灵宝为食，无坚不摧</p>
+                        </div>
+                        <div class="bg-red-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-red-800 mb-1">六翼霜蚣</h4>
+                            <p class="text-xs text-red-600">冰属性真灵后裔，遁速极快</p>
+                        </div>
+                        <div class="bg-red-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-red-800 mb-1">玄冰夔牛</h4>
+                            <p class="text-xs text-red-600">灵界北海霸主，操控极致寒冰</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 符箓篇 -->
+            <div class="card md:col-span-1 p-6 flex flex-col relative">
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-orange"></div>
+                <div class="flex items-center mb-4">
+                    <i class="fa-solid fa-scroll text-3xl gradient-text-orange mr-4"></i>
+                    <h2 class="text-xl font-bold gradient-text-orange">符箓篇</h2>
+                </div>
+                <p class="text-gray-600 mb-4 text-sm">符箓是修仙者的"一次性法术"，无需长期修炼即可使用。</p>
+                
+                <div class="mb-4">
+                    <h3 class="text-base font-semibold text-gray-800 mb-3">符箓等级体系</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-3"></div>
+                            <span class="text-xs"><strong>初/中/高阶符</strong></span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
+                            <span class="text-xs"><strong>符宝/真宝</strong></span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-orange-600 rounded-full mr-3"></div>
+                            <span class="text-xs"><strong>仙家符箓</strong></span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-orange-700 rounded-full mr-3"></div>
+                            <span class="text-xs"><strong>仙符</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-auto">
+                    <h3 class="text-base font-semibold text-gray-800 mb-3">核心符箓</h3>
+                    <div class="space-y-2">
+                        <div class="bg-orange-50 p-2 rounded text-xs">
+                            <h4 class="font-semibold text-orange-800">降灵符</h4>
+                            <p class="text-orange-600">短暂提升战力</p>
+                        </div>
+                        <div class="bg-orange-50 p-2 rounded text-xs">
+                            <h4 class="font-semibold text-orange-800">六丁天甲符</h4>
+                            <p class="text-orange-600">强大防御护罩</p>
+                        </div>
+                        <div class="bg-orange-50 p-2 rounded text-xs">
+                            <h4 class="font-semibold text-orange-800">三清雷霄符</h4>
+                            <p class="text-orange-600">雷霆法则攻击</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 功法篇 -->
+            <div class="card md:col-span-1 p-6 flex flex-col relative">
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-cyan"></div>
+                <div class="flex items-center mb-4">
+                    <i class="fa-solid fa-book-open-reader text-3xl gradient-text-cyan mr-4"></i>
+                    <h2 class="text-xl font-bold gradient-text-cyan">功法篇</h2>
+                </div>
+                <p class="text-gray-600 mb-4 text-sm">功法是修仙者的立身之本，其等级严格对应修士境界。</p>
+                
+                <div class="mb-4">
+                    <h3 class="text-base font-semibold text-gray-800 mb-3">功法等级体系</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
+                            <span class="text-xs"><strong>基础功法</strong></span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
+                            <span class="text-xs"><strong>顶阶功法</strong></span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-cyan-600 rounded-full mr-3"></div>
+                            <span class="text-xs"><strong>灵界功法</strong></span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-cyan-700 rounded-full mr-3"></div>
+                            <span class="text-xs"><strong>仙界功法</strong></span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-cyan-800 rounded-full mr-3"></div>
+                            <span class="text-xs"><strong>禁术</strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-auto">
+                    <h3 class="text-base font-semibold text-gray-800 mb-3">核心功法</h3>
+                    <div class="space-y-2">
+                        <div class="bg-cyan-50 p-2 rounded text-xs">
+                            <h4 class="font-semibold text-cyan-800">长春功</h4>
+                            <p class="text-cyan-600">温和绵长，滋养经脉</p>
+                        </div>
+                        <div class="bg-cyan-50 p-2 rounded text-xs">
+                            <h4 class="font-semibold text-cyan-800">青元剑诀</h4>
+                            <p class="text-cyan-600">以剑养气，以气御剑</p>
+                        </div>
+                        <div class="bg-cyan-50 p-2 rounded text-xs">
+                            <h4 class="font-semibold text-cyan-800">大衍诀</h4>
+                            <p class="text-cyan-600">神魂修炼，神识翻倍</p>
+                        </div>
+                        <div class="bg-cyan-50 p-2 rounded text-xs">
+                            <h4 class="font-semibold text-cyan-800">真言化轮经</h4>
+                            <p class="text-cyan-600">时间法则操控</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 阵法篇 -->
+            <div class="card md:col-span-2 p-6 flex flex-col relative">
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-blue"></div>
+                <div class="flex items-center mb-4">
+                    <i class="fa-solid fa-shield-halved text-3xl gradient-text-blue mr-4"></i>
+                    <h2 class="text-2xl font-bold gradient-text-blue">阵法篇</h2>
+                </div>
+                <p class="text-gray-600 mb-4">阵法是修仙者的"群体作战利器"，以阵基为引、阵点为节点，通过神识连接形成阵面。</p>
+                
+                <div class="mb-4">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">阵法等级体系</h3>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                            <span class="text-sm"><strong>基础阵法</strong> - 人界（炼气-结丹）</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                            <span class="text-sm"><strong>高阶阵法</strong> - 人界（元婴-化神）</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
+                            <span class="text-sm"><strong>灵界大阵</strong> - 灵界（炼虚-大乘）</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-2 h-2 bg-blue-700 rounded-full mr-3"></div>
+                            <span class="text-sm"><strong>仙阵</strong> - 仙界（真仙-道祖）</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-auto">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">核心阵法</h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-blue-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-blue-800 mb-1">颠倒五行阵</h4>
+                            <p class="text-xs text-blue-600">扰乱五感与神识，陷入幻境</p>
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-blue-800 mb-1">两仪万引大阵</h4>
+                            <p class="text-xs text-blue-600">分散化解攻击，反弹敌人</p>
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-blue-800 mb-1">九宫天乾符阵</h4>
+                            <p class="text-xs text-blue-600">封锁空间，困入独立维度</p>
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-lg">
+                            <h4 class="font-semibold text-blue-800 mb-1">光阴天璇大阵</h4>
+                            <p class="text-xs text-blue-600">加速或减缓时间流逝</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 玄界之门 -->
+            <div class="card md:col-span-2 p-6 flex flex-col relative">
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-purple"></div>
+                <div class="flex items-center mb-4">
+                    <i class="fa-solid fa-door-open text-3xl gradient-text-purple mr-4"></i>
+                    <h2 class="text-2xl font-bold gradient-text-purple">玄界之门专属设定</h2>
+                </div>
+                <p class="text-gray-600 mb-4">作为《凡人修仙传》的衍生作品，《玄界之门》的体系与正传存在一定差异，但核心逻辑一致。</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                    <div>
+                        <h3 class="text-base font-semibold text-gray-800 mb-2">核心法宝</h3>
+                        <div class="space-y-2">
+                            <div class="bg-purple-50 p-2 rounded text-xs">
+                                <h4 class="font-semibold text-purple-800">四不象</h4>
+                                <p class="text-purple-600">蛮族荒原稀有坐骑</p>
+                            </div>
+                            <div class="bg-purple-50 p-2 rounded text-xs">
+                                <h4 class="font-semibold text-purple-800">翻天棍</h4>
+                                <p class="text-purple-600">可化作战塔或长棍</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-semibold text-gray-800 mb-2">核心功法</h3>
+                        <div class="space-y-2">
+                            <div class="bg-purple-50 p-2 rounded text-xs">
+                                <h4 class="font-semibold text-purple-800">灵符宝经</h4>
+                                <p class="text-purple-600">符道核心功法</p>
+                            </div>
+                            <div class="bg-purple-50 p-2 rounded text-xs">
+                                <h4 class="font-semibold text-purple-800">通天棍法</h4>
+                                <p class="text-purple-600">武道核心功法</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-semibold text-gray-800 mb-2">核心阵法</h3>
+                        <div class="space-y-2">
+                            <div class="bg-purple-50 p-2 rounded text-xs">
+                                <h4 class="font-semibold text-purple-800">烈焰符阵</h4>
+                                <p class="text-purple-600">九层符阵，火焰攻击</p>
+                            </div>
+                            <div class="bg-purple-50 p-2 rounded text-xs">
+                                <h4 class="font-semibold text-purple-800">玄界之门大阵</h4>
+                                <p class="text-purple-600">开启通往仙界的门</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 总结 -->
+            <div class="card md:col-span-2 p-6 flex flex-col relative">
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-green"></div>
+                <div class="flex items-center mb-4">
+                    <i class="fa-solid fa-star text-3xl gradient-text-green mr-4"></i>
+                    <h2 class="text-2xl font-bold gradient-text-green">总结</h2>
+                </div>
+                <p class="text-gray-600 mb-4">《凡人修仙传》全系列的修仙体系是支撑剧情的核心骨架，其严谨性与层次感不仅让韩立的修仙之路充满真实感，更构建了一个横跨多界面的宏大世界观。</p>
+                
+                <div class="bg-green-50 p-4 rounded-lg mt-auto">
+                    <p class="text-sm text-green-800 italic">从早期的青竹蜂云剑、长春功，到后期的掌天瓶、大五行幻世诀，每一种宝物、功法、丹药都与韩立的成长阶段完美匹配，体现了"修仙之路永无止境"的核心主题。</p>
+                </div>
+            </div>
+
+            <!-- 图表卡片 -->
+            <div class="card md:col-span-2 p-6 flex flex-col relative">
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-blue"></div>
+                <h2 class="text-xl font-bold text-gray-800 mb-4">境界与对应法宝等级关系</h2>
+                <div class="flex-grow h-64">
+                    <canvas id="realmChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // 境界与法宝等级关系图表
+    const ctx = document.getElementById('realmChart').getContext('2d');
+    const realmChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['炼气期', '筑基期', '结丹期', '元婴期', '化神期', '炼虚期', '合体期', '大乘期', '真仙期', '金仙期', '太乙玉仙期', '大罗金仙期', '道祖期'],
+            datasets: [{
+                label: '法宝等级',
+                data: [1, 1, 2, 3, 3, 4, 4, 5, 6, 6, 6, 6, 7],
+                backgroundColor: [
+                    'rgba(59, 130, 246, 0.2)',
+                    'rgba(59, 130, 246, 0.2)',
+                    'rgba(139, 92, 246, 0.2)',
+                    'rgba(34, 197, 94, 0.2)',
+                    'rgba(34, 197, 94, 0.2)',
+                    'rgba(239, 68, 68, 0.2)',
+                    'rgba(239, 68, 68, 0.2)',
+                    'rgba(249, 115, 22, 0.2)',
+                    'rgba(6, 182, 212, 0.2)',
+                    'rgba(6, 182, 212, 0.2)',
+                    'rgba(6, 182, 212, 0.2)',
+                    'rgba(6, 182, 212, 0.2)',
+                    'rgba(107, 114, 128, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(59, 130, 246, 1)',
+                    'rgba(59, 130, 246, 1)',
+                    'rgba(139, 92, 246, 1)',
+                    'rgba(34, 197, 94, 1)',
+                    'rgba(34, 197, 94, 1)',
+                    'rgba(239, 68, 68, 1)',
+                    'rgba(239, 68, 68, 1)',
+                    'rgba(249, 115, 22, 1)',
+                    'rgba(6, 182, 212, 1)',
+                    'rgba(6, 182, 212, 1)',
+                    'rgba(6, 182, 212, 1)',
+                    'rgba(6, 182, 212, 1)',
+                    'rgba(107, 114, 128, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 8,
+                    ticks: {
+                        callback: function(value) {
+                            const levels = ['', '法器', '符宝/真宝', '法宝/古宝', '通天灵宝', '玄天之宝', '仙器', '法则至宝'];
+                            return levels[value];
+                        }
+                    }
+                },
+                x: {
+                    ticks: {
+                        maxRotation: 45
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+</script>
+</html>
