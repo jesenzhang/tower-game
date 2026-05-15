@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Pre-commit hook: run quality gate
+set -euo pipefail
+
+echo "Running pre-commit checks..."
+
+# Run guard first
+./scripts/agent-guard.sh
+
+# Run full quality gate
+./scripts/agent-check.sh

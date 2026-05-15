@@ -1,0 +1,19 @@
+# Godot
+.godot/
+*.import
+export_presets.cfg
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
